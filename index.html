@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>PROTON Sustainability</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f7f8fa;
+color:#222;
+line-height:1.7;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* ================= NAVBAR ================= */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#062B5B;
+z-index:999;
+box-shadow:0 5px 15px rgba(0,0,0,.1);}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;}
+
+.logo{
+color:#fff;
+font-size:26px;
+font-weight:700;}
+
+.logo span{
+color:#57B846;}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;}
+
+nav ul li a{
+color:#fff;
+text-decoration:none;}
+
+nav ul li a:hover{
+color:#57B846;}
+
+.navbar{
+background:#333;
+padding:10px 20px;}
+
+.nav-links{
+list-style:none;
+display:flex;
+gap:20px;
+margin:0;
+padding:0;}
+
+.nav-links li a{
+color:#fff;
+text-decoration:none;
+padding:10px;
+display:block;}
+
+.dropdown-menu{
+position:relative;}
+
+.dropdown-menu{
+display:none;
+position:absolute;
+top:70%;
+right:0;
+background:#fff;
+min-width:180px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+list-style:none;
+padding:0;
+margin:0;
+z-index:999;}
+
+.dropdown-menu li a{
+color:#333;
+padding:10px;}
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover{
+display:block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url("S70_front.png");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+color:#fff;
+padding-top:80px;}
+
+.hero-content{
+max-width:650px;}
+
+.hero h1{
+font-size:58px;
+line-height:1.2;
+margin-bottom:20px;}
+
+.hero p{
+font-size:18px;
+margin-bottom:25px;}
+
+.btn{
+display:inline-block;
+padding:14px 30px;
+background:#57B846;
+color:#fff;
+border-radius:30px;
+text-decoration:none;
+transition:0.3s;}
+
+.btn:hover{
+background:#3f9f30;}
+
+/* ================= SECTIONS ================= */
+section{
+padding:90px 0;}
+
+.title{
+text-align:center;
+margin-bottom:50px;}
+
+.title h2{
+font-size:36px;
+color:#062B5B;}
+
+/* ================= ABOUT ================= */
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:justify;}
+
+.about-img img{
+width:100%;
+border-radius:10px;}
+
+/* ================= ESG ================= */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;}
+
+.card{
+background:#fff;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+text-align:center;
+transition:transform .3s ease, box-shadow .3s ease;}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,.2);}
+
+
+/* ================= HIGHLIGHTS ================= */
+
+.highlight{
+background:#062B5B;
+color:#fff;}
+
+.highlight-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+text-align:center;
+gap:20px;}
+
+.highlight-box h2{
+color:#57B846;
+font-size:40px;}
+
+/* ================= TIMELINE ================= */
+
+.timeline-section{
+padding:90px 0;
+background:#fff;}
+
+.timeline{
+position:relative;
+max-width:900px;
+margin:50px auto;}
+
+.timeline::before{
+content:"";
+position:absolute;
+left:20px;
+top:0;
+width:4px;
+height:100%;
+background:#57B846;}
+
+.timeline-item{
+position:relative;
+padding-left:70px;
+margin-bottom:50px;}
+
+.timeline-dot{
+position:absolute;
+left:10px;
+top:8px;
+width:22px;
+height:22px;
+background:#062B5B;
+border-radius:50%;
+border:4px solid #57B846;}
+
+.timeline-dot.green{
+background:#57B846;}
+
+.timeline-content{
+background:#f8f8f8;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+transition:.3s;}
+
+.timeline-content:hover{
+transform:translateY(-5px);}
+
+.timeline-content h3{
+color:#57B846;
+margin-bottom:8px;}
+
+.timeline-content h4{
+color:#062B5B;
+margin-bottom:10px;}
+
+/* ================= NEWS ================= */
+
+
+.news{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;}
+
+.news-card{
+width:300px;
+background:#fff;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+text-align:center;
+padding-bottom:15px;}
+
+.news-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+display:block;}
+
+.news-card h3{
+margin:15px 10px;
+font-size:20px;}
+
+.news-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+transition:0.5s ease;}
+
+.read-more{
+text-align:center;
+margin-top:30px;}
+
+.read-more a{
+display:inline-block;
+padding:10px 20px;
+background:#000;
+color:#fff;
+text-decoration:none;
+border-radius:5px;
+transition:0.3s;}
+
+.read-more a:hover{
+background:#333;}
+
+/* ================= CTA ================= */
+
+.cta{
+background:#57B846;
+color:#fff;
+text-align:center;}
+
+.white-btn{
+background:#fff;
+color:#062B5B;}
+
+* {box-sizing: border-box;}
+
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background-color: #FFFFF0;}
+
+.content{ 
+padding:30px; 
+min-height:500px;}
+
+button {
+padding: 10px 20px;
+background-color: green;
+color: white;
+border: none;}
+
+.contact{
+display:flex;
+justify-content:center;
+align-items:flex-start;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.contact-box{
+background-color:#062B5B;
+border:1px solid #ddd;
+border-radius:10px;
+padding:20px;
+margin-bottom:20px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+flex:1;
+max-width:600px;}
+
+.contact-box:hover{
+transform:translateY(-2px);
+transition:0.3s;}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea{
+width:100%;
+padding:10px;
+margin-top:5px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:5px;}
+
+.submit-btn{
+width:100%;
+background-color:#4CAF50;
+color:white;
+padding:12px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-size:16px;
+transition:.3s;}
+
+.submit-btn:hover{
+background-color:#45a049;}
+
+.checkbox{
+display:flex;
+align-items:flex-start;
+gap:10px;
+margin-bottom:20px;}
+
+.checkbox input{
+width:auto;
+margin-top:3px;}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+background:#02152d;
+color:#fff;
+padding:60px 0;}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+align-items:start;}
+
+.social-icons a{
+font-size:25px;
+color:white;
+margin:20px;
+transition:0.3s;}
+
+.social-icons a:hover{color:#00a651;}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+.hero h1{font-size:36px;}
+
+.about-grid{grid-template-columns:1fr;}
+
+.highlight-grid{grid-template-columns:repeat(2,1fr);}
+
+.footer-grid{grid-template-columns:1fr;}
+
+nav ul{display:none;}}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+<div class="container">
+<nav>
+<div class="logo">PROTON <span>Sustainability</span></div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#esg">ESG</a></li>
+<li><a href="#news">News</a></li>
+
+<li class="dropdown">
+<a href="#contact">Contact ▾</a>
+
+<ul class="dropdown-menu">
+<li><a href="#contact">Contact Form</a></li>
+<li><a href="https://www.proton.com" target="_blank">Company Website</a></li>
+<li><a href="mailto:support@example.com">Email Us</a></li>
+</ul>
+
+</li>
+
+</ul>
+</nav>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container hero-content">
+<h1>Driving Towards A Sustainable Future</h1>
+<p>PROTON is committed to cleaner mobility, responsible manufacturing, and a greener future.</p>
+<a href="#about" class="btn">Explore More</a>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container about-grid">
+
+<div>
+<h2>About Sustainability</h2>
+<p>In PROTON, we focus on environmental, social, and governance (ESG) principles to ensure long-term impact.</p>
+<br>
+<p><b>Who Are We?</b></p>
+<br>
+<p>PROTON was founded in 1983, PROTON is Malaysia's national automotive company.
+
+Today, sustainability has become one of the company's core priorities.
+
+Through innovation, environmental protection and responsible governance, PROTON strives to create long-term value for customers, employees, communities and the nation.
+</p>
+</div>
+
+<div class="about-img">
+<img src="proton.png" alt="PROTON company image">
+</div>
+
+</div>
+</section>
+
+<!-- ESG -->
+<section id="esg">
+<div class="container">
+<div class="title"><h2>ESG Pillars</h2></div>
+
+<div class="cards">
+<div class="card"><i class="fas fa-leaf"></i><h3>Environment</h3></div>
+<div class="card"><i class="fas fa-users"></i><h3>Social</h3></div>
+<div class="card"><i class="fas fa-building"></i><h3>Governance</h3></div>
+</div>
+</div>
+</section>
+
+<!-- HIGHLIGHT -->
+
+<section class="highlight">
+<div class="container">
+<div class="highlight-grid">
+
+<div><h2>Environmental</h2><p>Programs</p></div>
+
+<div><h2>Social</h2><p>Activities</p></div>
+
+<div><h2>Governance</h2><p>and Communities</p></div>
+
+<div><h2>Innovation</h2><p>and Initiatives</p></div>
+
+</div>
+</div>
+</section>
+
+<!-- TIMELINE -->
+
+<section class="timeline-section">
+
+<div class="container">
+
+<div class="title">
+<h2>Our Sustainability Journey</h2>
+<p>Key milestones in PROTON's commitment towards a greener future.</p>
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+
+<div class="timeline-content">
+<h3>1983</h3>
+<h4>PROTON Founded</h4>
+<p>Established as Malaysia's national automotive company.</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+
+<div class="timeline-content">
+<h3>2024</h3>
+<h4>Launch of PROTON e.MAS</h4>
+<p>Introduced Malaysia's new era of electric mobility.</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot"></div>
+
+<div class="timeline-content">
+<h3>2025</h3>
+<h4>Green Community Initiatives</h4>
+<p>Environmental awareness, beach clean-up and CSR programmes.</p>
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-dot green"></div>
+
+<div class="timeline-content">
+<h3>Future</h3>
+<h4>Towards Net Zero</h4>
+<p>Driving sustainable innovation for future generations.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- NEWS -->
+
+<section id="news">
+<div class="container">
+
+<div class="title">
+<h2>Latest News</h2>
+</div>
+
+<div class="news">
+
+<div class="news-card">
+<a href="https://www.proton.com/happenings/2026/june/proton-steps-up-environmental-awareness-with-third-beach-cleaning-initiative" target="_blank">
+<img src="environtment.png" alt="Environmental Awareness - PROTON Beach Cleaning Initiative">
+</a>
+
+<h3>Environmental Awareness</h3>
+<p><i>"Proton Steps Up Environmental Awareness With Third Beach Cleaning Initiative"</i></p>
+</div>
+
+
+<div class="news-card">
+<a href="https://www.proton.com/happenings/2026/january/proton-introduces-coe-category-a-emas-7-variant-in-singapore" target="_blank">
+<img src="ev.png" alt="EV Awareness - PROTON Electric Vehicle Portfolio">
+</a>
+
+<h3>EV Awareness</h3>
+<p><i>"Building Momentum For PROTON's Electric Vehicle Portfolio Overseas"</i></p>
+</div>
+
+
+<div class="news-card">
+<a href="https://www.proton.com/happenings/2026/march/proton-encourages-safe-festive-travel-with-raya-campaign-featuring-gold-bar-rewards" target="_blank">
+<img src="roadnews.png" alt="Road Safety - PROTON Safe Festive Travel Campaign">
+</a>
+
+<h3>Road Safety</h3>
+<p><i>"This initiative reflects PROTON's continuous commitment to keeping Malaysians safe on the road."</i></p>
+
+</div>
+
+</div>
+
+<div class="read-more">
+<a href="https://www.proton.com/happenings" target="_blank">
+Read More →
+</a>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta" id="contact">
+<div class="container">
+<h2>Proton to greener future.</h2>
+<br><br>
+<a class="btn white-btn" href="#home">Back to Top</a>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+<div class="container footer-grid">
+
+<!-- Column 1 -->
+<div>
+<h3>PROTON Sustainability</h3>
+<p>Leading to responsible innovation.</p>
+</div>
+
+<!-- Column 2 -->
+
+<div>
+<h3>Follow Us</h3>
+
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+</div>
+
+</div>
+
+<!-- Column 3 -->
+<div>
+
+<h3>Contact</h3>
+
+<p><strong>Proton HQ, Malaysia</strong></p>
+
+<p>Any inquiry, please contact us.</p>
+
+<div class="contact-box">
+
+<h4>Send Me a Message</h4>
+<form action="thankyou.html" target="_blank">
+
+<label>Full Name</label>
+<input type="text" name="fullname" required>
+
+<label>Email Address</label>
+<input type="email" name="email" required>
+
+<label>Phone Number</label>
+<input type="tel" name="phone" required>
+
+<label>Subject</label>
+<input type="text" name="subject" required>
+
+<label>Message</label>
+<textarea name="message" rows="5" required></textarea>
+<label class="checkbox">
+<input type="checkbox" name="consent" required>
+<span>
+I consent to the collection and use of my personal information for the purpose of responding to my enquiry.
+</span>
+</label>
+
+<input type="submit" value="Submit" class="submit-btn">
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+&copy; 2026 PROTON Holdings Berhad. All Rights Reserved.
+</div>
+
+</footer>
